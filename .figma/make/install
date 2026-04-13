@@ -2,3 +2,6 @@
 set -e
 
 pnpm install
+
+# Build the shadcn package so dist/icons/index.js is available
+pnpm --filter shadcn build

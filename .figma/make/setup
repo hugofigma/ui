@@ -1,5 +1,4 @@
 #!/bin/sh
 set -e
 
-# Build the shadcn package so dist/icons/index.js is available
-pnpm --filter shadcn build
+exit 0
