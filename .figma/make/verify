@@ -1,0 +1,13 @@
+#!/bin/sh
+
+end=$(($(date +%s) + 60))
+
+while [ "$(date +%s)" -lt "$end" ]; do
+  if curl --fail --silent --output /dev/null http://localhost:4444; then
+    exit 0
+  fi
+  sleep 2
+done
+
+# Final attempt — its exit code becomes the script's exit code
+curl --fail --silent --output /dev/null http://localhost:4444
