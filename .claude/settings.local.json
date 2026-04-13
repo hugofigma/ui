@@ -6,7 +6,8 @@
       "Bash(ls:*)",
       "Bash(cat:*)",
       "WebSearch",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\(''scripts'',{}\\), indent=2\\)\\)\")"
     ],
     "deny": []
   }
