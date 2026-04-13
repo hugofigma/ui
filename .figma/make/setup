@@ -1,4 +1,27 @@
 #!/bin/sh
 set -e
 
+# Install Node.js via Homebrew if not present
+if ! command -v node >/dev/null 2>&1; then
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Error: Homebrew is required to install Node.js. Install it from https://brew.sh" >&2
+    exit 1
+  fi
+  echo "Installing Node.js..."
+  brew install node
+fi
+
+# Enable corepack (ships with Node.js) to make pnpm available
+if ! command -v pnpm >/dev/null 2>&1; then
+  echo "Enabling pnpm via corepack..."
+  corepack enable
+fi
+
+if [ ! -f apps/v4/.env ]; then
+  cat > apps/v4/.env <<EOF
+NEXT_PUBLIC_V0_URL=https://v0.dev
+NEXT_PUBLIC_APP_URL=http://localhost:4444
+EOF
+fi
+
 exit 0
