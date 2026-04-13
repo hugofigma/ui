@@ -1,4 +1,10 @@
 #!/bin/sh
 set -e
 
-exit 0
+# Create .env for the v4 app if it doesn't exist
+if [ ! -f apps/v4/.env ]; then
+  cat > apps/v4/.env <<EOF
+NEXT_PUBLIC_V0_URL=https://v0.dev
+NEXT_PUBLIC_APP_URL=http://localhost:4444
+EOF
+fi
