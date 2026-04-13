@@ -2,7 +2,7 @@ import { copyFileSync } from "fs"
 import { defineConfig } from "tsup"
 
 export default defineConfig({
-  clean: !process.argv.includes("--watch"),
+  clean: false,
   dts: true,
   entry: [
     "src/index.ts",
