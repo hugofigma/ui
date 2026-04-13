@@ -16,7 +16,7 @@ import { Button } from "@/registry/new-york-v4/ui/button"
 
 import { RootComponents } from "./components"
 
-const title = "The Foundation for your Design System"
+const title = "Hello Figma"
 const description =
   "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code."
 
@@ -52,7 +52,7 @@ export default function IndexPage() {
     <div className="flex flex-1 flex-col">
       <PageHeader>
         <Announcement />
-        <PageHeaderHeading className="max-w-4xl">{title}</PageHeaderHeading>
+        <PageHeaderHeading className="max-w-4xl" style={{ color: "#ef4444" }}>{title}</PageHeaderHeading>
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm" className="h-[31px] rounded-lg">
