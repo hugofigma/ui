@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm registry:build && pnpm icons:dev & next dev --turbopack --port 4444",
+    "dev": "pnpm registry:build && pnpm icons:dev && next dev --turbopack --port 4444",
     "build": "pnpm registry:build && next build",
     "start": "next start --port 4444",
     "preview": "pnpm registry:build && next build && next start --port 4444",
