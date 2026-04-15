@@ -46,3 +46,8 @@ next-env.d.ts
 .contentlayer
 .content-collections
 .source
+
+
+# temporary registry build artifacts
+registry/*-*/
+registry-*.json
